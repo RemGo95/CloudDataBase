@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T7aWwm+zlDrZ8ItZvjG3UUnx2l0COYbWHfTA4o7xK46upM3ihusNLpysQkdWi+E1vb+bjBkF5bmNMhDNCdhE/A==",
+  "dgSpecHash": "Ch95n6G8OscjgIuWdv2HD4Wm87tlMVAX5cFItzedWiUPUIi2UdOaYgUrM8wbgXwKayKV9m/UN4a0JMgtP2jsow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\KBA-RemigiuszG\\Documents\\.net5\\.net5.csproj",
+  "projectFilePath": "C:\\Users\\KBA-RemigiuszG\\Documents\\.net5\\Connect.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KBA-RemigiuszG\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\KBA-RemigiuszG\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

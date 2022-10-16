@@ -2571,9 +2571,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KBA-RemigiuszG\\Documents\\.net5\\.net5.csproj",
-      "projectName": ".net5",
-      "projectPath": "C:\\Users\\KBA-RemigiuszG\\Documents\\.net5\\.net5.csproj",
+      "projectUniqueName": "C:\\Users\\KBA-RemigiuszG\\Documents\\.net5\\Connect.csproj",
+      "projectName": "Connect",
+      "projectPath": "C:\\Users\\KBA-RemigiuszG\\Documents\\.net5\\Connect.csproj",
       "packagesPath": "C:\\Users\\KBA-RemigiuszG\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\KBA-RemigiuszG\\Documents\\.net5\\obj\\",
       "projectStyle": "PackageReference",
