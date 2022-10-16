@@ -9,12 +9,36 @@ namespace _net5
     {
         static void Main(string[] args)
         {
+            Choose();
+        }
+
+        static void Choose(){
+            //char input=Console.ReadKey().KeyChar;
+            ConsoleKeyInfo symbol;
             Console.WriteLine("Starting DataBase");
+            Console.WriteLine("Choose SQL data handle method: (M-Connect via MSC method, C-Connect Simple, R-Read)");
+
+            symbol = Console.ReadKey();
+
+            switch (symbol.Key) //Switch on Key enum
+            {
+                case ConsoleKey.M:
+                    ConnectionMSC();
+                    break;
+                case ConsoleKey.C:
+                    Conn();
+                    break;
+                case ConsoleKey.R:
+                    Read();
+                    break;
+            }
+
             ConnectionMSC();
-            
+
         }
 
         static void Conn(){
+            Console.WriteLine("Connecting to db...");
             string ConnectionData;
             SqlConnection con;
             ConnectionData = @"Data Source=DESKOP-#####;Initial Catalog=Datadb;User ID=sa;Password=########";
@@ -24,8 +48,36 @@ namespace _net5
             con.Close(); 
         }
 
+        static void Read()
+        {
+            Console.WriteLine("Reading from db...");
+            string ConnectionData;
+            SqlConnection con;
+            ConnectionData = @"Data Source=DESKOP-#####;Initial Catalog=Datadb;User ID=sa;Password=########";
+            con = new SqlConnection(ConnectionData);
+            con.Open();
+            SqlCommand cmd;
+            SqlDataReader dreader;
+            string sql, output = "";
+            sql = "Select articleID, articleName from Datadb";
+            cmd = new SqlCommand(sql, con);
+            dreader = cmd.ExecuteReader();
+            while (dreader.Read()) {
+                output = output + dreader.GetValue(0) + " - " +
+                                dreader.GetValue(1) + "\n";
+            }
+
+            Console.Write(output);
+ 
+            // to close all the objects
+            dreader.Close();
+            cmd.Dispose();
+            con.Close();
+        }
+
         static void ConnectionMSC()
         {
+            Console.WriteLine("Connection via msc db...");
             //Connect by method from Microsoft manual
             try
             {
