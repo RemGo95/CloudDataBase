@@ -10,6 +10,22 @@ namespace _net5
         static void Main(string[] args)
         {
             Console.WriteLine("Starting DataBase");
+            ConnectionMSC();
+            
+        }
+
+        static void Conn(){
+            string ConnectionData;
+            SqlConnection con;
+            ConnectionData = @"Data Source=DESKOP-#####;Initial Catalog=Datadb;User ID=sa;Password=########";
+            con = new SqlConnection(ConnectionData);
+            con.Open();
+            Console.WriteLine("Connection...");
+            con.Close(); 
+        }
+
+        static void ConnectionMSC()
+        {
             //Connect by method from Microsoft manual
             try
             {
@@ -49,7 +65,6 @@ namespace _net5
             Console.WriteLine("\nDone. Press enter.");
             Console.ReadLine(); 
 
-            
         }
     }
 }
